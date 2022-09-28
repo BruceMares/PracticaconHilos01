@@ -1,16 +1,16 @@
-
-public class Hilos {
-    private int numeros;
+public class Hilos implements Runnable{
+    private int Num;
 
     public Hilos(int n) {
-        this.numeros = n;}
+        this.Num = n;}
 
     public void run () {
         int prod = 1;
-        for(int i=numeros; i > 0; i--){
+        for(int i=Num; i > 0; i--){
             prod = prod * i;
         }
         System.out.println(Thread.currentThread().getName() + ":" + prod);
     }
 }
+
 
